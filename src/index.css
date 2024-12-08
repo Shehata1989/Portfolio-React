@@ -3,7 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --primary: #000;
+  --bg-color: white;
+  --text-color: black;
+  --text-color-secondary: #82828a;
+  --menu-bg: #f1f1f1;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: white;
+  --text-color-secondary: #82828a;
+  --menu-bg: #252529;
 }
 
 html {
@@ -12,10 +22,6 @@ html {
   padding: 0;
 }
 
-.light {
-  --primary: #fff;
-}
-
 body {
-  background-color: var(--primary);
+  background-color: var(--bg-color);
 }

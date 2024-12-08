@@ -1,4 +1,3 @@
-
 const HeroSection = () => {
   const contantHero = {
     head: "Software designer, founder, and amateur astronaut.",
@@ -9,14 +8,20 @@ const HeroSection = () => {
   return (
     <section className="text-white">
       <div className="contact max-w-[42rem]">
-        <img className="rounded-full mb-8" src="/public/avatar.webp" alt="Avatar!" />
-        <h1 className="text-4xl font-bold mb-8">{contantHero.head}</h1>
-        <p className="mb-8">{contantHero.paragraph}</p>
+        <img
+          className="rounded-full mb-8"
+          src="/public/avatar.webp"
+          alt="Avatar!"
+        />
+        <h1 className="text-[var(--text-color)] text-4xl font-bold mb-8">{contantHero.head}</h1>
+        <p className="mb-8 text-[var(--text-color-secondary)] text-lg leading-7">
+          {contantHero.paragraph}
+        </p>
       </div>
       <div className="social">
-        <div className="flex items-center gap-5">
-          <span className="icon-x text-3xl"></span>
-          <span className="icon-instagram text-3xl"></span>
+        <div className="flex items-center gap-5 text-[var(--text-color-secondary)]">
+          <span className="icon-x text-2xl"></span>
+          <span className="icon-instagram text-2xl"></span>
           <span className="icon-github text-2xl"></span>
           <span className="icon-linkedin text-2xl"></span>
         </div>
