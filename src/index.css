@@ -3,17 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: white;
+  --bg-color: #f1f1f1;
+  --bg-color-container: white;
   --text-color: black;
   --text-color-secondary: #82828a;
   --menu-bg: #f1f1f1;
+  --hover-icon: #44c6b2
 }
 
 [data-theme="dark"] {
-  --bg-color: #252529;
+  --bg-color: #000;
+  --bg-color-container: #18181b;
   --text-color: white;
   --text-color-secondary: #82828a;
-  --menu-bg: #121212;
+  --menu-bg: #252529;
 }
 
 html {
