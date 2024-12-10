@@ -28,3 +28,8 @@ html {
 body {
   background-color: var(--menu-bg);
 }
+
+.active {
+  opacity: 1;
+  border: 1px solid var(--hover-icon);
+}
