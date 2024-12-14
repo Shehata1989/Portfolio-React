@@ -6,7 +6,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="text-white"> 
+    <section className="text-white">
       <div className="contact max-w-[42rem]">
         <img className="rounded-full mb-8" src="/avatar.webp" alt="Avatar!" />
         <h1 className="text-[var(--text-color)] text-4xl font-bold mb-8">

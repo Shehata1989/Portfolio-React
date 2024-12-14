@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -7,10 +8,19 @@ const Header = () => {
     return localStorage.getItem("theme") === "dark";
   });
 
+  // const isHomePage = window.location.pathname === "/";
+
   const [activeLink, setActiveLink] = useState(() => {
+    // if (isHomePage) return -1;
     const savedLink = localStorage.getItem("activeLink");
-    return savedLink ? parseInt(savedLink) : 0;
+    return savedLink ? parseInt(savedLink) : -1;
   });
+
+  useEffect(() => {
+    const currentPath = window.location.hash.replace("#", "").toLowerCase();
+    const activeIndex = navBar.findIndex((link) => link.toLowerCase() === currentPath);
+    setActiveLink(activeIndex >= 0 ? activeIndex : -1);
+  }, [navBar]);
 
   const handelLi = (index) => {
     setActiveLink(index);
@@ -34,9 +44,9 @@ const Header = () => {
                 onClick={() => handelLi(idx)}
                 className={`${
                   activeLink === idx
-                    ? "text-[var(--hover-icon)] font-bold"
+                    ? "text-[var(--hover-icon)]"
                     : "text-[var(--text-color)]"
-                } hover:text-[var(--hover-icon)] hover:font-bold hover:tracking-wide duration-200`}
+                } hover:text-[var(--hover-icon)] hover:font-bold hover:tracking-wide duration-200 font-bold`}
                 href={`#${link.toLowerCase()}`}
               >
                 {link}
