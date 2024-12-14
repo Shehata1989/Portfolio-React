@@ -1,26 +1,28 @@
 /* eslint-disable react/prop-types */
 const Card = ({ img, title, description, time }) => {
   return (
-    <div className="card rounded-2xl flex flex-col ">
-      <div className="img h-[250px]">
-        <img
-          className="w-full h-full object-cover rounded-2xl"
-          src={img}
-          alt=""
-        />
-      </div>
-      <div className="title p-4 h-full">
-        <time className="relative z-10 mb-3  flex items-center text-sm text-[var(--text-color-secondary)]">
-          <span className="h-4 w-0.5 text-[var(--text-color-secondary)] bg-[var(--text-color-secondary)] mr-4"></span>
-          {time}
-        </time>
-        <h1 className="font-bold text-xl capitalize text-[var(--text-color)]">
-          {title}
-        </h1>
+    <div className="card rounded-2xl flex flex-col justify-between">
+      <div className="title">
+        <div className="img h-[250px]">
+          <img
+            className="w-full h-full object-cover rounded-2xl"
+            src={img}
+            alt=""
+          />
+        </div>
+        <div className="p-4">
+          <time className="relative z-10 my-3  flex items-center text-sm text-[var(--text-color-secondary)]">
+            <span className="h-4 w-0.5 text-[var(--text-color-secondary)] bg-[var(--text-color-secondary)] mr-4"></span>
+            {time}
+          </time>
+          <h1 className="font-bold text-xl capitalize text-[var(--text-color)]">
+            {title}
+          </h1>
 
-        <p className="relative z-10 mt-2 text-sm text-[var(--text-color-secondary)]">
-          {description}
-        </p>
+          <p className="relative z-10 mt-2 text-sm text-[var(--text-color-secondary)]">
+            {description}
+          </p>
+        </div>
       </div>
 
       <div className="link p-4 text-sm font-medium text-[var(--hover-icon)]">

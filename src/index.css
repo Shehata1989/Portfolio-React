@@ -32,4 +32,5 @@ body {
 .active {
   opacity: 1;
   border: 1px solid var(--hover-icon);
+  font-weight: bold;
 }
