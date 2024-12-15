@@ -8,10 +8,7 @@ const Header = () => {
     return localStorage.getItem("theme") === "dark";
   });
 
-  // const isHomePage = window.location.pathname === "/";
-
   const [activeLink, setActiveLink] = useState(() => {
-    // if (isHomePage) return -1;
     const savedLink = localStorage.getItem("activeLink");
     return savedLink ? parseInt(savedLink) : -1;
   });
