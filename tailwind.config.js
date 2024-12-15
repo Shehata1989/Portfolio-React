@@ -10,6 +10,7 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {},
       animation: {
         scale: "scale 1s",
       },

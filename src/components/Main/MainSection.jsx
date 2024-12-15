@@ -53,7 +53,7 @@ const MainSection = () => {
       <div className="projects flex-1">
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
           {cards.map((card, idx) => (
-            <Card key={idx} {...card} className="h-full"/>
+            <Card key={idx} {...card} className="h-full" />
           ))}
         </div>
       </div>
