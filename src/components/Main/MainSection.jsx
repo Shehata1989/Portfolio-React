@@ -51,19 +51,17 @@ const MainSection = () => {
   };
 
   return (
-    <section className="flex gap-10 md:gap-16 text-[var(--text-color)] mt-8">
+    <section className=" md:flex gap-10 md:gap-16 text-[var(--text-color)] mt-8">
       <div className="btn flex flex-col gap-5">
         <Button
           label={button}
           activeButton={activeButton}
-          onClick={handelButton}
+          handelButton={handelButton}
         />
       </div>
       <div className="projects flex-1">
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-          {cards.map((card, idx) => (
-            <Card key={idx} {...card} className="h-full"/>
-          ))}
+            <Card cards={filteredCards} />
         </div>
       </div>
     </section>
