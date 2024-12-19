@@ -52,16 +52,16 @@ const MainSection = () => {
 
   return (
     <section className=" md:flex gap-10 md:gap-16 text-[var(--text-color)] mt-8">
-      <div className="btn flex flex-col gap-5">
+      <div className="flex flex-col gap-5 btn">
         <Button
           label={button}
           activeButton={activeButton}
           handelButton={handelButton}
         />
       </div>
-      <div className="projects flex-1">
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-            <Card cards={filteredCards} />
+      <div className="flex-1 projects">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <Card cards={filteredCards} />
         </div>
       </div>
     </section>

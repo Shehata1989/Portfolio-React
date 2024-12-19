@@ -15,7 +15,9 @@ const Header = () => {
 
   useEffect(() => {
     const currentPath = window.location.hash.replace("#", "").toLowerCase();
-    const activeIndex = navBar.findIndex((link) => link.toLowerCase() === currentPath);
+    const activeIndex = navBar.findIndex(
+      (link) => link.toLowerCase() === currentPath
+    );
     setActiveLink(activeIndex >= 0 ? activeIndex : -1);
   }, [navBar]);
 
