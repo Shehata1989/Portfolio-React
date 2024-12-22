@@ -10,21 +10,8 @@ const Header = () => {
     return localStorage.getItem("theme") === "dark";
   });
 
-  const [activeLink, setActiveLink] = useState(() => {
-    const savedLink = localStorage.getItem("activeLink");
-    return savedLink ? parseInt(savedLink) : -1;
-  });
-
   const ulRef = useRef(null);
   const menuButtonRef = useRef(null);
-
-  useEffect(() => {
-    const currentPath = window.location.hash.replace("#", "").toLowerCase();
-    const activeIndex = navBar.findIndex(
-      (link) => link.toLowerCase() === currentPath
-    );
-    // setActiveLink(activeIndex >= 0 ? activeIndex : -1);
-  }, [navBar]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -42,11 +29,6 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  const handleLi = (index) => {
-    setActiveLink(index);
-    localStorage.setItem("activeLink", index);
-  };
 
   const toggleDarkMode = () => {
     const newTheme = darkMode ? "light" : "dark";
@@ -70,7 +52,6 @@ const Header = () => {
             <li className={`mb-3 last:mb-0 md:m-auto`} key={idx}>
               <NavLink
                 to={link.toLowerCase()}
-                onClick={() => handleLi(idx)}
                 className={`text-[var(--text-color)] hover:text-[var(--hover-icon)] hover:font-bold hover:tracking-wide duration-200 font-bold`}
                 href={`#${link.toLowerCase()}`}
               >
