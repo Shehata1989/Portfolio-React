@@ -1,16 +1,16 @@
 // @ts-nocheck
-import Container from "./Container";
-import Header from "./components/Header/Header";
-import HeroSection from "./components/HeroSection/HeroSection";
-import MainSection from "./components/Main/MainSection";
+import Home from "./components/Pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
+
   return (
-    <Container>
-      <Header />
-      <HeroSection />
-      <MainSection />
-    </Container>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 };
 

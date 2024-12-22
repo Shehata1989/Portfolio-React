@@ -1,4 +1,4 @@
-import { lazy, useState } from "react";
+import { useState } from "react";
 import Card from "./Card";
 import Button from "./Button";
 
