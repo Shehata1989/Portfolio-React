@@ -46,7 +46,7 @@ const Header = () => {
       <nav className="">
         <ul
           ref={ulRef}
-          className="hidden bg-[var(--menu-bg)] absolute w-[90%] left-0 right-0 top-20 animate-scale px-10 py-5 md:flex md:justify-center md:items-center md:gap-5 md:static md:px-7 md:py-3 rounded-2xl m-auto md:m-0 md:w-auto"
+          className="hidden animate-scale bg-[var(--menu-bg)] absolute w-[90%] left-0 right-0 top-20 px-10 py-5 md:flex md:justify-center md:items-center md:gap-5 md:static md:px-7 md:py-3 rounded-2xl m-auto md:m-0 md:w-auto"
         >
           {navBar.map((link, idx) => (
             <li className={`mb-3 last:mb-0 md:m-auto`} key={idx}>

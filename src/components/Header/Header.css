@@ -2,21 +2,3 @@
 header nav .active {
   color: var(--hover-icon);
 }
-
-.menu-visible {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Animation for closing */
-.menu-hidden {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Default hidden state */
-.hidden {
-  display: none;
-}
