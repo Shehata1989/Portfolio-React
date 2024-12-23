@@ -1,6 +1,11 @@
-
+import { useNavigate } from "react-router-dom";
 const About = () => {
-  return <div className="text-[var(--text-color)]">About</div>;
+  const navigate = useNavigate();
+  return (
+      <div className="">
+        <button onClick={() => navigate("/")}>Back Home</button>
+      </div>
+  );
 };
 
 export default About;
