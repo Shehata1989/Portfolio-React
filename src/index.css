@@ -27,9 +27,9 @@ body {
   background-color: var(--menu-bg);
 }
 
-
-/* .active {
+.active {
   opacity: 1;
   color: var(--hover-icon);
+  border: solid 1px var(--hover-icon);
   font-weight: bold;
-} */
+}
