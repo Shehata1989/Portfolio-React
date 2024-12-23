@@ -20,7 +20,7 @@ const Header = () => {
         !ulRef.current.contains(event.target) &&
         !menuButtonRef.current.contains(event.target)
       ) {
-        ulRef.current.classList.add("hidden"); // إخفاء القائمة
+        ulRef.current.classList.add("hidden");
       }
     };
 
@@ -52,8 +52,15 @@ const Header = () => {
             <li className={`mb-3 last:mb-0 md:m-auto`} key={idx}>
               <NavLink
                 to={link.toLowerCase()}
-                className={`text-[var(--text-color)] hover:text-[var(--hover-icon)] hover:font-bold hover:tracking-wide duration-200 font-bold`}
-                href={`#${link.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "text-[var(--hover-icon)]"
+                      : "text-[var(--text-color)]"
+                  }
+                  hover:text-[var(--hover-icon)] hover:font-bold hover:tracking-wide duration-200 font-bold`
+                }
+                href={`${link.toLowerCase()}`}
               >
                 {link}
               </NavLink>
